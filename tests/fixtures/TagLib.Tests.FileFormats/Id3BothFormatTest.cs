@@ -6,8 +6,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class Id3BothFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample_both.mp3";
-        private static string tmp_file = "samples/tmpwrite_both.mp3";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample_both.mp3";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite_both.mp3";
         private File file;
         
         [TestFixtureSetUp]
@@ -67,13 +67,13 @@ namespace TagLib.Tests.FileFormats
         [Test]
         public void TestCorruptionResistance()
         {
-            StandardTests.TestCorruptionResistance ("samples/corrupt/a.mp3");
+            StandardTests.TestCorruptionResistance(TestHelper.SamplesPath + "samples/corrupt/a.mp3");
         }
 
         [Test]
         public void TestRemoveTags ()
         {
-            const string file_name = @"samples/remove_tags.mp3";
+            const string file_name = TestHelper.SamplesPath + "samples/remove_tags.mp3";
             ByteVector.UseBrokenLatin1Behavior = true;
             var file = File.Create (file_name);
             Assert.AreEqual (TagTypes.Id3v1 | TagTypes.Id3v2 | TagTypes.Ape, file.TagTypesOnDisk);

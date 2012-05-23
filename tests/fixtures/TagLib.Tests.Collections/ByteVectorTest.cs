@@ -7,7 +7,7 @@ namespace TagLib.Tests.Collections
 {   
     [TestFixture]
     public class ByteVectorTest
-    {   
+    {
         private static readonly string TestInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private static readonly ByteVector TestVector = ByteVector.FromString(TestInput, StringType.UTF8);
         
@@ -112,7 +112,7 @@ namespace TagLib.Tests.Collections
         [Test]
         public void FromUri()
         {
-            ByteVector vector = ByteVector.FromPath("samples/vector.bin");
+            ByteVector vector = ByteVector.FromPath(TestHelper.SamplesPath + "samples/vector.bin");
             Assert.AreEqual(3282169185, vector.Checksum);
             Assert.AreEqual("1aaa46c484d70c7c80510a5f99e7805d", MD5Hash(vector.Data));
         }

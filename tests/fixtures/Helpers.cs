@@ -3,6 +3,12 @@ using TagLib;
 
 namespace TagLib.Tests
 {
+    public class TestHelper
+    {
+        public const string SamplesPath = "../../tests/";
+        public const string ExamplesPath = "../../examples/";
+    }
+
 	public class Debugger
 	{
 		public static void DumpHex (ByteVector data)

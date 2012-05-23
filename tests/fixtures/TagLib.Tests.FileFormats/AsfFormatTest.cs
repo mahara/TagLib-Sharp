@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class AsfFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample.wma";
-        private static string tmp_file = "samples/tmpwrite.wma";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.wma";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.wma";
         private File file;
         
         [TestFixtureSetUp]

@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class OggFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample.ogg";
-        private static string tmp_file = "samples/tmpwrite.ogg";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.ogg";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.ogg";
         private File file;
         
         [TestFixtureSetUp]

@@ -15,8 +15,8 @@ namespace TagLib.Tests.FileFormats
 		private const string PURD_DATE = "2009-01-26 08:14:10";
 		private const string TV_SHOW = "Ask An Astronomer";
 
-		private const string sample_file = "samples/sample.m4v";
-		private const string tmp_file = "samples/tmpwrite.m4v";
+        private const string sample_file = TestHelper.SamplesPath + "samples/sample.m4v";
+        private const string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.m4v";
 		private File file;
 
 		[TestFixtureSetUp]

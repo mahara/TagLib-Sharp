@@ -8,8 +8,8 @@ namespace TagLib.Tests.FileFormats
 	[TestFixture]
 	public class AacFormatTest : IFormatTest
 	{
-		private static string sample_file = "samples/sample.aac";
-		private static string tmp_file = "samples/tmpwrite.aac";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.aac";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.aac";
 		private File file;
 
 		[TestFixtureSetUp]

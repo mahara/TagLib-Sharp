@@ -12,8 +12,8 @@ namespace TagLib.Tests.Images
 	[TestFixture]
 	public class JpegNikon4Test
 	{
-		private static string sample_file = "samples/sample_nikon4.jpg";
-		private static string tmp_file = "samples/tmpwrite_nikon4.jpg";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample_nikon4.jpg";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite_nikon4.jpg";
 
 		private TagTypes contained_types = TagTypes.TiffIFD;
 

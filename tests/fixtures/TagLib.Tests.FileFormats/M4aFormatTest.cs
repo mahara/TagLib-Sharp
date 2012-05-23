@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class M4aFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample.m4a";
-        private static string tmp_file = "samples/tmpwrite.m4a";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.m4a";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.m4a";
         private File file;
         
         [TestFixtureSetUp]

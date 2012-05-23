@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class MpcFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample.mpc";
-        private static string tmp_file = "samples/tmpwrite.mpc";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.mpc";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.mpc";
         private File file;
         
         [TestFixtureSetUp]

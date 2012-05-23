@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class FlacFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample.flac";
-        private static string tmp_file = "samples/tmpwrite.flac";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.flac";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.flac";
         private File file;
         
         [TestFixtureSetUp]

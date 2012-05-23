@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class AviFormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample.avi";
-        private static string tmp_file = "samples/tmpwrite.avi";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample.avi";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite.avi";
         private File file;
         
         [TestFixtureSetUp]

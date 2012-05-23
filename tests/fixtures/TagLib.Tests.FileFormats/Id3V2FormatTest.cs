@@ -7,10 +7,10 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class Id3V2FormatTest : IFormatTest
     {
-        private static string sample_file = "samples/sample_v2_only.mp3";
-        private static string corrupt_file = "samples/corrupt/null_title_v2.mp3";
-        private static string tmp_file = "samples/tmpwrite_v2_only.mp3";
-        private static string ext_header_file = "samples/sample_v2_3_ext_header.mp3";
+        private static string sample_file = TestHelper.SamplesPath + "samples/sample_v2_only.mp3";
+        private static string corrupt_file = TestHelper.SamplesPath + "samples/corrupt/null_title_v2.mp3";
+        private static string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite_v2_only.mp3";
+        private static string ext_header_file = TestHelper.SamplesPath + "samples/sample_v2_3_ext_header.mp3";
         private File file;
         
         [TestFixtureSetUp]
