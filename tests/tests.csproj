@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,6 +10,7 @@
     <RootNamespace>tests</RootNamespace>
     <AssemblyName>tests</AssemblyName>
     <ReleaseVersion>2.0.3.5</ReleaseVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,9 +29,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\glib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
-    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </ItemGroup>
   <ItemGroup>
@@ -50,11 +59,10 @@
     <Compile Include="fixtures\TagLib.Tests.FileFormats\IFormatTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.FileFormats\JpegFormatTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.FileFormats\M4aFormatTest.cs" />
-	<Compile Include="fixtures\TagLib.Tests.FileFormats\M4vFormatTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.FileFormats\M4vFormatTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.FileFormats\MpcFormatTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.FileFormats\OggFormatTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.FileFormats\StandardTests.cs" />
-    <Compile Include="fixtures\TagLib.Tests.FileFormats\TiffFormatTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\AddImageMetadataTests.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\JpegCanonZoombrowserTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\JpegNikon1Test.cs" />
@@ -71,7 +79,6 @@
     <Compile Include="fixtures\TagLib.Tests.Images\JpegSony2Test.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\JpegTangledTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\RationalTest.cs" />
-    <Compile Include="fixtures\TagLib.Tests.Images\TiffXmpTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Utils.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\CommentModificationValidator.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\ImageTest.cs" />
@@ -79,8 +86,11 @@
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\IMetadataModificationValidator.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\KeywordsModificationValidator.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\NoModificationValidator.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\Validators\PropertyModificationValidator.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\Validators\RemoveMetadataValidator.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\TagCommentModificationValidator.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\Validators\TagKeywordsModificationValidator.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\Validators\TagPropertyModificationValidator.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\XapTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\XmpCrashTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\XmpSpecTest.cs" />
@@ -94,6 +104,12 @@
     <Compile Include="fixtures\TagLib.Tests.TaggingFormats\MovieIdTagTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.TaggingFormats\Mpeg4Test.cs" />
     <Compile Include="fixtures\TagLib.Tests.TaggingFormats\XiphTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\taglib-sharp.csproj">
+      <Project>{6b143a39-c7b2-4743-9917-92262c60e9a6}</Project>
+      <Name>taglib-sharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -111,11 +127,4 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <ProjectReference Include="..\src\taglib-sharp.csproj">
-      <Project>{6B143A39-C7B2-4743-9917-92262C60E9A6}</Project>
-      <Name>taglib-sharp</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
