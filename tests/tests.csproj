@@ -15,7 +15,7 @@
     <OutputPath>..\bin\$(Configuration)</OutputPath>
     <BaseIntermediateOutputPath>..\temp\obj\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
-    <DocumentationFile>..\bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
+    <!-- <DocumentationFile>..\bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile> -->
     <!-- <SignAssembly>true</SignAssembly> -->
     <!-- <AssemblyOriginatorKeyFile>..\build\taglib-sharp.snk</AssemblyOriginatorKeyFile> -->
   </PropertyGroup>
@@ -36,10 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\glib-sharp.dll</HintPath>
-    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="nunit.core">
       <HintPath>..\lib\nunit.core.dll</HintPath>
     </Reference>

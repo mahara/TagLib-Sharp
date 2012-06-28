@@ -288,7 +288,6 @@
   <ItemGroup>
     <None Include="AssemblyInfo.cs.in" />
     <None Include="policy.2.0.taglib-sharp.config.in" />
-    <None Include="taglib-sharp.snk" />
     <None Include="TagLib\TagLib.sources" />
   </ItemGroup>
 </Project>
