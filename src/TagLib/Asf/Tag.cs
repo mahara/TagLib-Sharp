@@ -574,10 +574,20 @@ namespace TagLib.Asf {
 		///    This property is implemented using the author stored in
 		///    the ASF Content Description Object.
 		/// </remarks>
-		public override string [] Performers {
-			get {return SplitAndClean (description.Author);}
-			set {description.Author = string.Join ("; ", value);}
-		}
+        public override string[] Performers
+        {
+            get { return SplitAndClean(description.Author); }
+            set { description.Author = string.Join("; ", value); }
+        }
+        //public override string[] Performers
+        //{
+        //    get {
+        //        return GetDescriptorStrings("WM/Author");
+        //    }
+        //    set {
+        //        SetDescriptorStrings(value, "WM/Author");
+        //    }
+        //}
 		
 		/// <summary>
 		///    Gets and sets the sort names of the performers or artists

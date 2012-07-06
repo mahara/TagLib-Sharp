@@ -10,19 +10,20 @@
     <RootNamespace>tests</RootNamespace>
     <AssemblyName>tests</AssemblyName>
     <ReleaseVersion>2.0.4.0</ReleaseVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SolutionDir>..\</SolutionDir>
     <OutputPath>..\bin\$(Configuration)</OutputPath>
     <BaseIntermediateOutputPath>..\temp\obj\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+    <TargetFrameworkProfile />
     <!-- <DocumentationFile>..\bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile> -->
     <!-- <SignAssembly>true</SignAssembly> -->
     <!-- <AssemblyOriginatorKeyFile>..\build\taglib-sharp.snk</AssemblyOriginatorKeyFile> -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -107,6 +108,46 @@
     <Compile Include="fixtures\TagLib.Tests.TaggingFormats\MovieIdTagTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.TaggingFormats\Mpeg4Test.cs" />
     <Compile Include="fixtures\TagLib.Tests.TaggingFormats\XiphTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Collections\ImageBlockFileTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.FileFormats\Id3V24FormatTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\BadCommentMarkerTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\BGO493530Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\BGO625367Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\BGO631333Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\CopyFromTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\EmptyCommentTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\GifExiftoolLongCommentTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\GifExiftoolTangled1Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\GifExiftoolTangled2Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\GifExiftoolTangled3Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\GifExiftoolTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\GifGimpTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\InvalidIFDEntryTypeTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\InvalidIFDOffsetTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\JpegBGO624097Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\JpegCanonBibble5Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\JpegNikon1Bibble5Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\JpegNikon2Bibble5Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\JpegOlympusCorruptMNTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\JpegPropertyTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\NullOrientationTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\PngGimpPngcrushTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\PngGimpTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\RecursiveIFDTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffCanonBibble516BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffCanonBibble58BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffCanonDpp16BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffCanonDpp8BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffGimp1Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffGimp2Test.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon1Bibble516BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon1Bibble58BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon1ViewNX16BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon1ViewNX8BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2Bibble516BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2Bibble58BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2ViewNX16BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2ViewNX8BitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\taglib-sharp.csproj">
@@ -118,9 +159,9 @@
   <Import Project="..\build\DefaultBuild.targets" />
   <ProjectExtensions>
     <MonoDevelop>
-      <Properties InternalTargetFrameworkVersion="3.5">
-        <MonoDevelop.Autotools.MakefileInfo IntegrationEnabled="true" RelativeMakefileName="Makefile.am" BuildTargetName="build" IsAutotoolsProject="true" RelativeConfigureInPath="..">
-          <BuildFilesVar Sync="true" Name="ASSEMBLY_CSFILES" />
+      <Properties>
+        <MonoDevelop.Autotools.MakefileInfo RelativeMakefileName="Makefile.am" BuildTargetName="build" IsAutotoolsProject="True" RelativeConfigureInPath="..">
+          <BuildFilesVar Sync="True" Name="ASSEMBLY_CSFILES" />
           <DeployFilesVar />
           <ResourcesVar />
           <OthersVar />
