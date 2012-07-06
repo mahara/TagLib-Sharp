@@ -7,8 +7,8 @@ namespace TagLib.Tests.FileFormats
     [TestFixture]
     public class Id3V24FormatTest : IFormatTest
     {
-        private const string sample24unsynchronization_file = "samples/sample_v2_4_unsynch.mp3";
-        private const string tmp_file = "samples/tmpwrite_v2_4_unsynch.mp3";
+        private const string sample24unsynchronization_file = TestHelper.SamplesPath + "samples/sample_v2_4_unsynch.mp3";
+        private const string tmp_file = TestHelper.SamplesPath + "samples/tmpwrite_v2_4_unsynch.mp3";
         private File file;
 
         [TestFixtureSetUp]
