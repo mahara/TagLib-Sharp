@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,7 +10,6 @@
     <RootNamespace>tests</RootNamespace>
     <AssemblyName>tests</AssemblyName>
     <ReleaseVersion>2.0.4.0</ReleaseVersion>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SolutionDir>..\</SolutionDir>
     <OutputPath>..\bin\$(Configuration)</OutputPath>
     <BaseIntermediateOutputPath>..\temp\obj\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
@@ -148,6 +147,8 @@
     <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2Bibble58BitTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2ViewNX16BitTest.cs" />
     <Compile Include="fixtures\TagLib.Tests.Images\TiffNikon2ViewNX8BitTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.Images\IptcTest.cs" />
+    <Compile Include="fixtures\TagLib.Tests.FileFormats\AudibleFormat.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\taglib-sharp.csproj">
