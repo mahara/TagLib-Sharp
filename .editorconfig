@@ -1,0 +1,16 @@
+﻿# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = crlf
+trim_trailing_whitespace = true
+
+[*.{xml,config}]
+indent_size = 2
+
+
+
