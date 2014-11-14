@@ -21,7 +21,7 @@ SOLUTION SETUP
 
     -   To disable documentation warning, in <PropertyGroup /> for Debug build, add the following lines:
 
-    <NoWarn>CS1591</NoWarn>
+    <NoWarn>1591</NoWarn>
 
     -   To enable default build behavior, in <Project />, add the following lines:
 
